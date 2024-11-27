@@ -2,6 +2,7 @@
 
 public class CarRepository : IRespository<CarModel>
 {
+    public List<CarModel> Cars = new List<CarModel>();
     public CarModel? Get(Guid Id)
     {
         throw new NotImplementedException();
@@ -14,7 +15,7 @@ public class CarRepository : IRespository<CarModel>
 
     public void Insert(CarModel model)
     {
-        throw new NotImplementedException();
+        if (model != null) { Cars.Add(model); }
     }
 
     public void Update(CarModel model)
@@ -29,6 +30,6 @@ public class CarRepository : IRespository<CarModel>
 
     public int RecordCount()
     {
-        throw new NotImplementedException();
+        return Cars.Count();
     }
 }
