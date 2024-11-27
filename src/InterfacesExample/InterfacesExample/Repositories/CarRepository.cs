@@ -1,6 +1,6 @@
 ﻿namespace InterfacesExample;
 
-public class CarRepository : IRespository<CarModel>
+public class CarRepository : ICarRepository
 {
     public List<CarModel> Cars = new List<CarModel>();
     public CarModel? Get(Guid Id)
