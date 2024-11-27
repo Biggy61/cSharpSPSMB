@@ -82,20 +82,37 @@ public class CarRepositoryTests
     public void UpdateRecordWithId_ShouldReturnRecord()
     {
         //Arrange
+        string updateName = "UpdateBlud";
+        string updateBrand = "UpdateBlud";
         CarModel car1 = new CarModel("Blud", "Bludbrand");
         CarRepository carRepository = new CarRepository();
-        //Act
         carRepository.Insert(car1);
-        carRepository.Update(car1);
+        //Act
+        CarModel updated = carRepository.Get(car1.Id);
+        updated.Name = updateName;
+        updated.Brand = updateBrand;
+        carRepository.Update(updated);
+
         //Asert
-       Assert
+        Assert.Equal(updateName, carRepository.Get(car1.Id).Name);
+        Assert.Equal(updateBrand, carRepository.Get(car1.Id).Brand);
     }
 
     [Fact]
 
     public void DeleteRecordWithId_ShouldDeleteRecord()
     {
-        
+        //Arrange
+        CarModel car1 = new CarModel("Blud", "Bludbrand");
+        CarRepository carRepository = new CarRepository();
+        carRepository.Insert(car1);
+        //Act
+        int carLenghtBefore = carRepository.RecordCount();
+        carRepository.Delete(car1.Id);
+        int carLenghtAfter = carRepository.RecordCount();
+
+        //Asert
+        Assert.True(carLenghtAfter < carLenghtBefore);
     }
  
 }

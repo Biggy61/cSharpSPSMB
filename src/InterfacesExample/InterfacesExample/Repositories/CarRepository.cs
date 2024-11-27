@@ -36,7 +36,7 @@ public class CarRepository : ICarRepository
 
     public void Delete(Guid Id)
     {
-        throw new NotImplementedException();
+        Cars.Remove(Get(Id));
     }
 
     public int RecordCount()
