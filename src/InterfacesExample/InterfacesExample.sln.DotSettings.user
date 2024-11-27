@@ -1,4 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=30e0a2e2_002De58b_002D4fcd_002D928d_002D0f89b4cabc9c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GettingNotInsertedRecordWithId_WithTwoRecords_ShouldReturnNull" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::42DFDBB6-A063-41A4-AEF1-45646AEA0A0E::net8.0::InterfacesExample.Tests.CarRepositoryTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5e3e5e58_002De68a_002D47a7_002Dac61_002D58ff4e65e181/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="InsertingNull_ShouldSustainRecordCount" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::42DFDBB6-A063-41A4-AEF1-45646AEA0A0E::net8.0::InterfacesExample.Tests.CarRepositoryTests.InsertingNull_ShouldSustainRecordCount&lt;/TestId&gt;&#xD;
@@ -9,8 +14,10 @@
     &lt;TestId&gt;xUnit::42DFDBB6-A063-41A4-AEF1-45646AEA0A0E::net8.0::InterfacesExample.Tests.CarRepositoryTests.InsertingNewModel_ShouldIncreaseRecordCount&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c59b37a2_002D0a7d_002D4abd_002Daed9_002Df5e806c5e167/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="InsertingNull_ShouldSustainRecordCount #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c59b37a2_002D0a7d_002D4abd_002Daed9_002Df5e806c5e167/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="InsertingNull_ShouldSustainRecordCount #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::42DFDBB6-A063-41A4-AEF1-45646AEA0A0E::net8.0::InterfacesExample.Tests.CarRepositoryTests.InsertingNull_ShouldSustainRecordCount&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::42DFDBB6-A063-41A4-AEF1-45646AEA0A0E::net8.0::InterfacesExample.Tests.CarRepositoryTests.GettingAllRecords_WithTwoRecords_ShouldReturnListOfTwoRecords&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::42DFDBB6-A063-41A4-AEF1-45646AEA0A0E::net8.0::InterfacesExample.Tests.CarRepositoryTests.GettingNotInsertedRecordWithId_WithTwoRecords_ShouldReturnNull&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

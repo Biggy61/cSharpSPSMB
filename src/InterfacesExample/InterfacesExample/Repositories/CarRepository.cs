@@ -5,12 +5,21 @@ public class CarRepository : ICarRepository
     public List<CarModel> Cars = new List<CarModel>();
     public CarModel? Get(Guid Id)
     {
-        throw new NotImplementedException();
+        foreach (var c in Cars)
+        {
+            if (c.Id == Id)
+            {
+                return c;
+            }
+            
+        } 
+        //var car = Cars.Single(car => car.Id == Id);
+        return null;
     }
 
     public List<CarModel> Get()
     {
-        throw new NotImplementedException();
+        return Cars;
     }
 
     public void Insert(CarModel model)
@@ -20,7 +29,9 @@ public class CarRepository : ICarRepository
 
     public void Update(CarModel model)
     {
-        throw new NotImplementedException();
+        var car = Cars.Single(car => car.Id == model.Id);
+        car.Name = model.Name;
+        car.Brand = model.Brand;
     }
 
     public void Delete(Guid Id)

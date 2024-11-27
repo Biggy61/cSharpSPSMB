@@ -2,7 +2,7 @@
 
 public interface IRepository<T> where T : IModel
 {
-    T? Get(Guid Id);
+    CarModel Get(Guid Id);
     List<T> Get();
     void Insert(T model);
     void Update(T model);
