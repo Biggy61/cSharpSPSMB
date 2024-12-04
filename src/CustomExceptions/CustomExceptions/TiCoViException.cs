@@ -1,6 +1,6 @@
 ﻿namespace CustomExceptions;
 
-public class TiCoViException : Exception
+public class    TiCoViException : Exception
 {
     public string Name;
     private const string _customMessage = $"opet chybi";
