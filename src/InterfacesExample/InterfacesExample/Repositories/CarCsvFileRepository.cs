@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace InterfacesExample;
 
 public class CarCsvFileRepository : ICarRepository
@@ -9,12 +11,28 @@ public class CarCsvFileRepository : ICarRepository
 
     public List<CarModel> Get()
     {
-        throw new NotImplementedException();
+        string path = @"data.csv";
+        List<CarModel> Cars = new List<CarModel>();
+            var lines = File.ReadLines(path);
+
+            foreach (string line in lines)
+            {
+                Console.WriteLine(line);
+                line.Split(",");
+                
+            }
+
+        return Cars;
     }
 
     public void Insert(CarModel model)
     {
-        throw new NotImplementedException();
+        string myInputLine = model.ToString();
+        string fileSpecification = "data.csv";
+        using (StreamWriter filewriter = new StreamWriter(fileSpecification, true, System.Text.Encoding.UTF8))
+        {
+            filewriter.WriteLine(myInputLine);
+        }
     }
 
     public void Update(CarModel model)

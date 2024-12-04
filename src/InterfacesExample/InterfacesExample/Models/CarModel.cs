@@ -33,4 +33,9 @@ public class CarModel : IModel, ICar
     {
         return $"{Id}: {Brand}({Name})";
     }
+
+    public override string ToString()
+    {
+        return $"Id: {Id}, Name: {Name}, Brand: {Brand}, DateCreate: {DateCreate}, DateModified: {DateModified}";
+    }
 }
