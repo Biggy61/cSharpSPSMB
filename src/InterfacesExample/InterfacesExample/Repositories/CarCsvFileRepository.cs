@@ -12,6 +12,7 @@ public class CarCsvFileRepository : ICarRepository
     public List<CarModel> Get()
     {
         string path = @"data.csv";
+        string[] cars = new string[5];
         List<CarModel> Cars = new List<CarModel>();
             var lines = File.ReadLines(path);
 
