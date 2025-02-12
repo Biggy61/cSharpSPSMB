@@ -9,7 +9,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MySqlConnector" Version="2.4.0" />
+      <Compile Update="Views\NavigationView.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Views\StandaView.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Views\ZdarskyView.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>
