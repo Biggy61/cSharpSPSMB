@@ -4,10 +4,10 @@ namespace DatabaseViewForm;
 
 public class DBDriver
 {
-    public string ServerDomain = "vydb1.spsmb.cz";
-    public string Username = "radek.pelikan";
+    public string ServerDomain = "localhost";
+    public string Username = "root";
     public string Password = "";
-    public string Database = "student_radek.pelikan_duolingo";
+    public string Database = "duolingo";
 
     public string connectionString =>
         $"Server={ServerDomain};Database={Database};User={Username};Password={Password};Port=3306;";

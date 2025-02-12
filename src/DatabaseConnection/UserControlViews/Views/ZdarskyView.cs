@@ -2,13 +2,16 @@
 
 public partial class ZdarskyView : UserControl
 {
-    public ZdarskyView()
+    private readonly BaseForm _parentForm;
+
+    public ZdarskyView(BaseForm parentForm)
     {
+        _parentForm = parentForm;
         InitializeComponent();
     }
 
     private void BackButton_Click(object sender, EventArgs e)
     {
-        throw new System.NotImplementedException();
+        _parentForm.SwitchView(BaseForm.ViewType.Navigation);
     }
 }
