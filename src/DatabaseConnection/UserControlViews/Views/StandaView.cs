@@ -14,4 +14,14 @@ public partial class StandaView : UserControl
     {
         _parentForm.SwitchView(BaseForm.ViewType.Navigation);
     }
+
+    private void next_Click(object sender, EventArgs e)
+    {
+        _parentForm.SwitchView(BaseForm.ViewType.Zdarsky);
+    }
+
+    private void back_Click(object sender, EventArgs e)
+    {
+        _parentForm.SwitchView(BaseForm.ViewType.Navigation);
+    }
 }

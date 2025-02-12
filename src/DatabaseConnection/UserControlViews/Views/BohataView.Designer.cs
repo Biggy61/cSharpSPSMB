@@ -1,8 +1,8 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
 namespace UserControlViews.Views;
 
-partial class StandaView
+partial class BohataView
 {
     /// <summary> 
     /// Required designer variable.
@@ -33,8 +33,8 @@ partial class StandaView
     {
         label1 = new System.Windows.Forms.Label();
         button1 = new System.Windows.Forms.Button();
+        Next = new System.Windows.Forms.Button();
         back = new System.Windows.Forms.Button();
-        next = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // label1
@@ -44,7 +44,7 @@ partial class StandaView
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(815, 49);
         label1.TabIndex = 0;
-        label1.Text = "Standa View";
+        label1.Text = "Bohata View";
         label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // button1
@@ -57,32 +57,32 @@ partial class StandaView
         button1.UseVisualStyleBackColor = true;
         button1.Click += BackButton_Click;
         // 
+        // Next
+        // 
+        Next.Location = new System.Drawing.Point(686, 421);
+        Next.Name = "Next";
+        Next.Size = new System.Drawing.Size(130, 68);
+        Next.TabIndex = 2;
+        Next.Text = "Next";
+        Next.UseVisualStyleBackColor = true;
+        Next.Click += Next_Click;
+        // 
         // back
         // 
-        back.Location = new System.Drawing.Point(0, 452);
+        back.Location = new System.Drawing.Point(3, 421);
         back.Name = "back";
-        back.Size = new System.Drawing.Size(122, 37);
-        back.TabIndex = 2;
+        back.Size = new System.Drawing.Size(123, 68);
+        back.TabIndex = 3;
         back.Text = "Back";
         back.UseVisualStyleBackColor = true;
         back.Click += back_Click;
         // 
-        // next
-        // 
-        next.Location = new System.Drawing.Point(694, 452);
-        next.Name = "next";
-        next.Size = new System.Drawing.Size(122, 37);
-        next.TabIndex = 3;
-        next.Text = "Next";
-        next.UseVisualStyleBackColor = true;
-        next.Click += next_Click;
-        // 
-        // StandaView
+        // BohataView
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        Controls.Add(next);
         Controls.Add(back);
+        Controls.Add(Next);
         Controls.Add(button1);
         Controls.Add(label1);
         Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -90,8 +90,8 @@ partial class StandaView
         ResumeLayout(false);
     }
 
+    private System.Windows.Forms.Button Next;
     private System.Windows.Forms.Button back;
-    private System.Windows.Forms.Button next;
 
     private System.Windows.Forms.Button button1;
 

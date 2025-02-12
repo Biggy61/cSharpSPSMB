@@ -1,8 +1,8 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
 namespace UserControlViews.Views;
 
-partial class StandaView
+partial class NameViews
 {
     /// <summary> 
     /// Required designer variable.
@@ -32,68 +32,52 @@ partial class StandaView
     private void InitializeComponent()
     {
         label1 = new System.Windows.Forms.Label();
-        button1 = new System.Windows.Forms.Button();
         back = new System.Windows.Forms.Button();
         next = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // label1
         // 
-        label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)238));
-        label1.Location = new System.Drawing.Point(0, 93);
+        label1.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, ((System.Drawing.FontStyle)(System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)), System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.Location = new System.Drawing.Point(327, 23);
         label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(815, 49);
+        label1.Size = new System.Drawing.Size(184, 65);
         label1.TabIndex = 0;
-        label1.Text = "Standa View";
-        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // button1
-        // 
-        button1.Location = new System.Drawing.Point(352, 178);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(122, 37);
-        button1.TabIndex = 1;
-        button1.Text = "Back";
-        button1.UseVisualStyleBackColor = true;
-        button1.Click += BackButton_Click;
+        label1.Text = "Name";
         // 
         // back
         // 
-        back.Location = new System.Drawing.Point(0, 452);
+        back.Location = new System.Drawing.Point(0, 487);
         back.Name = "back";
-        back.Size = new System.Drawing.Size(122, 37);
-        back.TabIndex = 2;
-        back.Text = "Back";
+        back.Size = new System.Drawing.Size(125, 62);
+        back.TabIndex = 1;
+        back.Text = "back";
         back.UseVisualStyleBackColor = true;
         back.Click += back_Click;
         // 
         // next
         // 
-        next.Location = new System.Drawing.Point(694, 452);
+        next.Location = new System.Drawing.Point(829, 487);
         next.Name = "next";
-        next.Size = new System.Drawing.Size(122, 37);
-        next.TabIndex = 3;
-        next.Text = "Next";
+        next.Size = new System.Drawing.Size(125, 62);
+        next.TabIndex = 2;
+        next.Text = "next";
         next.UseVisualStyleBackColor = true;
         next.Click += next_Click;
         // 
-        // StandaView
+        // NameViews
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         Controls.Add(next);
         Controls.Add(back);
-        Controls.Add(button1);
         Controls.Add(label1);
-        Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-        Size = new System.Drawing.Size(816, 489);
+        Size = new System.Drawing.Size(957, 549);
         ResumeLayout(false);
     }
 
     private System.Windows.Forms.Button back;
     private System.Windows.Forms.Button next;
-
-    private System.Windows.Forms.Button button1;
 
     private System.Windows.Forms.Label label1;
 

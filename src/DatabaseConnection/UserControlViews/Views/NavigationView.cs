@@ -19,4 +19,19 @@ public partial class NavigationView : UserControl
     {
         _parentForm.SwitchView(BaseForm.ViewType.Zdarsky);
     }
+
+    private void button3_Click(object sender, EventArgs e)
+    {
+        _parentForm.SwitchView(BaseForm.ViewType.Bohata);
+    }
+
+    private void next_Click(object sender, EventArgs e)
+    {
+        _parentForm.SwitchView(BaseForm.ViewType.Standa);
+    }
+
+    private void back_Click(object sender, EventArgs e)
+    {
+        _parentForm.SwitchView(BaseForm.ViewType.Bohata);
+    }
 }

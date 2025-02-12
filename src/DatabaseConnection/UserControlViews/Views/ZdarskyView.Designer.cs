@@ -33,6 +33,8 @@ partial class ZdarskyView
     {
         button1 = new System.Windows.Forms.Button();
         label1 = new System.Windows.Forms.Label();
+        back = new System.Windows.Forms.Button();
+        next = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // button1
@@ -55,15 +57,41 @@ partial class ZdarskyView
         label1.Text = "Zdarsky View";
         label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
+        // back
+        // 
+        back.Location = new System.Drawing.Point(3, 445);
+        back.Name = "back";
+        back.Size = new System.Drawing.Size(124, 44);
+        back.TabIndex = 2;
+        back.Text = "Back";
+        back.UseVisualStyleBackColor = true;
+        back.Click += back_Click;
+        // 
+        // next
+        // 
+        next.Location = new System.Drawing.Point(692, 442);
+        next.Name = "next";
+        next.Size = new System.Drawing.Size(124, 44);
+        next.TabIndex = 3;
+        next.Text = "Next";
+        next.UseVisualStyleBackColor = true;
+        next.Click += next_Click;
+        // 
         // ZdarskyView
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        Controls.Add(next);
+        Controls.Add(back);
         Controls.Add(label1);
         Controls.Add(button1);
+        Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
         Size = new System.Drawing.Size(816, 489);
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Button back;
+    private System.Windows.Forms.Button next;
 
     private System.Windows.Forms.Label label1;
 

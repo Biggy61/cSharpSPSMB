@@ -1,10 +1,9 @@
-﻿namespace UserControlViews.Views;
+namespace UserControlViews.Views;
 
-public partial class ZdarskyView : UserControl
+public partial class BohataView : UserControl
 {
     private readonly BaseForm _parentForm;
-
-    public ZdarskyView(BaseForm parentForm)
+    public BohataView(BaseForm parentForm)
     {
         _parentForm = parentForm;
         InitializeComponent();
@@ -17,11 +16,11 @@ public partial class ZdarskyView : UserControl
 
     private void back_Click(object sender, EventArgs e)
     {
-        _parentForm.SwitchView(BaseForm.ViewType.Standa);
+       _parentForm.SwitchView(BaseForm.ViewType.Zdarsky);
     }
 
-    private void next_Click(object sender, EventArgs e)
+    private void Next_Click(object sender, EventArgs e)
     {
-        _parentForm.SwitchView(BaseForm.ViewType.Bohata);
+        _parentForm.SwitchView(BaseForm.ViewType.Navigation);
     }
 }
