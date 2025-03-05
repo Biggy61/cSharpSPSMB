@@ -5,13 +5,13 @@ using MySqlConnector;
 
 public class DBDriver
 {
-    private static string ServerDomain = "vydb1.spsmb.cz";
-    private static string Username = "stepan.zdansky";
+    private static string ServerDomain = "127.0.0.1";
+    private static string Username = "root";
     private static string Password = "";
-    private static string Database = "student_stepan.zdansky_RPGApp";
+    private static string Database = "rpgapp";
 
     private static string connectionString =>
-        $"Server={ServerDomain};Database={Database};User={Username};Password={Password};Port=3306;";
+        $"Server={ServerDomain};Database={Database};User={Username};Port=3306;";
 
     public MySqlException? ThrownException;
 
@@ -32,7 +32,7 @@ public class DBDriver
         try
         {
             connection.Open();
-            string query = "SELECT * FROM users";
+            string query = "SELECT * FROM enemy";
             MySqlCommand command = new MySqlCommand(query, connection);
             // execute reader
             var reader = command.ExecuteReader();
@@ -65,7 +65,7 @@ public class DBDriver
             {
                 connection.Open();
                 using (var command = new MySqlCommand(
-                           "INSERT INTO users VALUES (@id, @username, @health, @damage, @armor, @criticalChance, @criticalScaler)",
+                           "INSERT INTO enemy VALUES (@id, @username, @health, @damage, @armor, @criticalChance, @criticalScaler)",
                            connection))
                 {
                     command.Parameters.AddWithValue("@id", enemy.Id);

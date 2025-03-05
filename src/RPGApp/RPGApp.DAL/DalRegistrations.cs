@@ -6,7 +6,7 @@ public static class DalRegistrations
 {
     public static IServiceCollection AddDbDriver(this IServiceCollection services)
     {
-        services.AddSingleton<DBDriver>(_ => new DBDriver(Helpers.ReadSecret("Enter db password")));
+        services.AddSingleton<DBDriver>(_ => new DBDriver(""));
         return services;
     }
 }
