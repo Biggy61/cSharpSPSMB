@@ -1,46 +1,37 @@
+using OopExamples.Interfaces.Exceptions;
+
+namespace OopExamples.Implemetations;
 using OopExamples.Interfaces;
 using System.Data;
 
-
-namespace OopExamples.Implementation;
-
 public class Computer : IComputer
 {
-    public IEntity Owner { get; init; }
-    public IMotherBoard MotherBoard { get; init; }
-    public ICPU Cpu { get; init; }
-    public IGPU Gpu { get; init; }
-    public IRAM Ram { get; init; }
-    public IPowerSupply PowerSupply { get; init; }
-    public ICase Case { get; init; }
-    public IMonitor[] Monitors { get; init; }
-    public bool IsOn { get; }
-    public bool IsPersonalPC { get; }
-    public bool IsCompanyPC { get; }
-
-    public Computer(IMotherBoard motherBoard, ICPU cpu, IGPU gpu, IRAM ram, IPowerSupply powerSupply, ICase @case)
-    {
-        MotherBoard = motherBoard;
-        Cpu = cpu;
-        Gpu = gpu;
-        Ram = ram;
-        PowerSupply = powerSupply;
-        Case = @case;
-    }
+    public IEntity Owner { get; set; }
+    public IMotherBoard MotherBoard { get; set; }
+    public ICPU Cpu { get; set; }
+    public IGPU Gpu { get; set; }
+    public IRAM Ram { get; set; }
+    public IPowerSupply PowerSupply { get; set; }
+    public ICase Case { get; set; }
+    public IMonitor[] Monitors { get; set; }
+    public bool IsOn { get; set; }
+    public bool IsPersonalPC { get; set; }
+    public bool IsCompanyPC { get; set; }
 
     public void PowerUp()
     {
-        Console.WriteLine("Powering up");
+        IsOn = true;
     }
 
     public void ShutDown()
     {
-        Console.WriteLine("Shutting down");
+        IsOn = false;
     }
 
     public void PressPowerButton()
     {
-        Console.WriteLine("Power button pressed");
+        if (IsOn) ShutDown();
+        else PowerUp();
     }
 
     public void Print(string text)
@@ -58,22 +49,34 @@ public class Computer : IComputer
         }
         catch (Exception ex)
         {
-            throw new ArgumentException("Invalid equation format.", ex);
+            throw new InvalidEquationException();
         }
     }
 
     public void ChangeOwner(IEntity? newOwner)
     {
-        throw new NotImplementedException();
+        Owner = newOwner;
+        IsPersonalPC = Owner is IPerson;
+        IsCompanyPC = Owner is ICompany;
     }
 
     public void RemoveOwner()
     {
-        throw new NotImplementedException();
+        Owner = null;
     }
 
     public IComputer BuildNewComputer(IComputerConfiguration configuration)
     {
-        throw new NotImplementedException();
+        if (configuration.MotherBoard is null || configuration.Cpu is null || configuration.Gpu is null || configuration.Ram is null || configuration.PowerSupply is null  || configuration.Case is null)
+            throw new ComputerMissingComponentsException();
+        
+        Computer computer = new Computer(); 
+        computer.MotherBoard = configuration.MotherBoard;
+        computer.Cpu = configuration.Cpu;
+        computer.Gpu = configuration.Gpu;
+        computer.Ram = configuration.Ram;
+        computer.PowerSupply = configuration.PowerSupply;
+        computer.Case = configuration.Case;
+        return computer;
     }
 }
