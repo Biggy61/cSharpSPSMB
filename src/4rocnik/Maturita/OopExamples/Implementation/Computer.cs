@@ -17,6 +17,17 @@ public class Computer : IComputer
     public bool IsOn { get; }
     public bool IsPersonalPC { get; }
     public bool IsCompanyPC { get; }
+
+    public Computer(IMotherBoard motherBoard, ICPU cpu, IGPU gpu, IRAM ram, IPowerSupply powerSupply, ICase @case)
+    {
+        MotherBoard = motherBoard;
+        Cpu = cpu;
+        Gpu = gpu;
+        Ram = ram;
+        PowerSupply = powerSupply;
+        Case = @case;
+    }
+
     public void PowerUp()
     {
         Console.WriteLine("Powering up");
@@ -49,6 +60,16 @@ public class Computer : IComputer
         {
             throw new ArgumentException("Invalid equation format.", ex);
         }
+    }
+
+    public void ChangeOwner(IEntity? newOwner)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void RemoveOwner()
+    {
+        throw new NotImplementedException();
     }
 
     public IComputer BuildNewComputer(IComputerConfiguration configuration)
